@@ -1,0 +1,166 @@
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{DAFTAR GAMBAR}{iv}{figure.caption.1}%
+\contentsline {chapter}{DAFTAR TABEL}{v}{figure.caption.1}%
+\contentsline {chapter}{\centering \normalsize DAFTAR KODE}{vi}{chapter*.2}%
+\contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
+\contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {I.2}Rumusan Masalah}{2}{section.1.2}%
+\contentsline {section}{\numberline {I.3}Tujuan}{3}{section.1.3}%
+\contentsline {section}{\numberline {I.4}Batasan Masalah}{3}{section.1.4}%
+\contentsline {section}{\numberline {I.5}Metodologi}{4}{section.1.5}%
+\contentsline {chapter}{\numberline {II}STUDI LITERATUR}{6}{chapter.2}%
+\contentsline {section}{\numberline {II.1}Sistem Informasi Akademik}{6}{section.2.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.2}Desain Interaksi}{6}{section.2.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.2.1}Pendekatan Desain Interaksi}{7}{subsection.2.2.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsubsection}{\numberline {II.2.1.1}\textit {User Centered Design}}{7}{subsubsection.2.2.1.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsubsection}{\numberline {II.2.1.2}\textit {Activity Centered Design}}{8}{subsubsection.2.2.1.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsubsection}{\numberline {II.2.1.3}\textit {Systems Design}}{8}{subsubsection.2.2.1.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsubsection}{\numberline {II.2.1.4}\textit {Genius Design}}{9}{subsubsection.2.2.1.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.3}\textit {User Interface}}{9}{section.2.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.4}\textit {User Experience}}{9}{section.2.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.5}\textit {User Experience Goals}}{10}{section.2.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.6}\textit {Usability Goals}}{11}{section.2.6}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.7}\textit {Usability Heuristics}}{11}{section.2.7}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.8}\textit {User Persona}}{12}{section.2.8}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.9}\textit {Usability Testing}}{13}{section.2.9}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.9.1}\textit {System Usability Scale} (SUS)}{13}{subsection.2.9.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.9.2}\textit {Single Ease Question} (SEQ)}{14}{subsection.2.9.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.9.3}\textit {Task Completion Rate} (TCR)}{14}{subsection.2.9.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.9.4}\textit {Time on Task} (ToT)}{15}{subsection.2.9.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.10}Penelitian Terkait}{15}{section.2.10}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{\numberline {III}ANALISIS MASALAH}{17}{chapter.3}%
+\contentsline {section}{\numberline {III.1}Analisis Kondisi Saat Ini}{17}{section.3.1}%
+\contentsline {section}{\numberline {III.2}Identifikasi Masalah Pengguna}{19}{section.3.2}%
+\contentsline {section}{\numberline {III.3}Analisis Kebutuhan}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {III.3.1}Kebutuhan Fungsional}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {III.3.2}Kebutuhan Nonfungsional}{21}{subsection.3.3.2}%
+\contentsline {section}{\numberline {III.4}Analisis Pemilihan Solusi}{22}{section.3.4}%
+\contentsline {subsection}{\numberline {III.4.1}Alternatif Solusi}{22}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {III.4.2}Analisis Penentuan Solusi}{23}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {IV}DESAIN KONSEP SOLUSI}{26}{chapter.4}%
+\contentsline {section}{\numberline {IV.1}Rancangan Solusi}{26}{section.4.1}%
+\contentsline {section}{\numberline {IV.2}\textit {Benchmarking}}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}SIAKAD Institut Teknologi Bandung (SIX ITB)}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}Sistem Informasi Akademik ITS (SIAKAD ITS / myITS)}{28}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {V}RENCANA SELANJUTNYA}{29}{chapter.5}%
+\contentsline {section}{\numberline {V.1}Jadwal dan Rencana Implementasi}{29}{section.5.1}%
+\contentsline {section}{\numberline {V.2}Rencana Evaluasi}{30}{section.5.2}%
+\contentsline {section}{\numberline {V.3}Analisis Risiko dan Mitigasi}{31}{section.5.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 

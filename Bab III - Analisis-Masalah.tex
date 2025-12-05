@@ -6,19 +6,258 @@
 % ============================================================================================
 \chapter{ANALISIS MASALAH}
 \label{chap:analisis-masalah}
+
 \section{Analisis Kondisi Saat Ini}
-Menurut \textcite{laudon2020}, gambarkan terlebih dahulu model konseptual sistem yang ada saat ini. Model konseptual ini berisi berbagai komponen atau subsitem dan interaksi antarsubsistem tersebut. Setelah itu, berikan penjelasan tentang masalah yang ada pada sistem tersebut. Paragraf berikut berisi contoh penjabaran masalah sistem informasi fasilitas kesehatan untuk pasien \autocite{pressman2019}. 
+\textit{Website} SIAKAD Universitas X saat ini terdiri atas beberapa subsistem yang saling berinteraksi untuk mendukung proses administrasi akademik. Entitas utama dalam sistem ini meliputi:
+
+\begin{enumerate}
+\item \textbf{Subsistem Administrasi Pusat}: Berfungsi sebagai pengelola data induk (\textit{Master Data}) yang mencakup manajemen pengguna (\textit{User Management}), struktur organisasi (Fakultas/Prodi), dan Kalender Akademik. Interaksi utama adalah pengelolaan data dosen, mahasiswa, dan mata kuliah.
+
+\item \textbf{Subsistem Keuangan}: Mengelola tagihan semester dan verifikasi pembayaran. Interaksi terjadi dua arah antara Mahasiswa (pengajuan bukti bayar) dan Admin Keuangan (validasi manual).
+
+\item \textbf{Subsistem Akademik (Dosen \& Kaprodi)}: Mengelola kurikulum, katalog mata kuliah, Rencana Pembelajaran Semester (RPS), dan penilaian. Kaprodi bertanggung jawab atas \textit{plotting} dosen wali dan kurikulum, sementara Dosen mengelola nilai dan perwalian.
+
+\item \textbf{Subsistem Kemahasiswaan (KRS)}: Modul tempat mahasiswa melakukan perencanaan studi (KRS) dan melihat riwayat nilai (Transkrip). Proses ini sangat bergantung pada status pembayaran di subsistem keuangan dan persetujuan di subsistem akademik.
+\end{enumerate}
+
+Masalah utama yang diidentifikasi dalam SIAKAD Universitas X saat ini adalah minimnya kualitas \textit{User Interface} (UI) yang berdampak langsung pada kompleksitas alur kerja pengguna. Secara visual, antarmuka SIAKAD saat ini menggunakan desain berbasis tabel (\textit{grid-based}) yang kaku dengan kepadatan informasi yang tinggi. Pada modul Admin dan Dosen/Kaprodi, data ditampilkan dalam tabel dengan banyak kolom yang mengharuskan pengguna melakukan \textit{scrolling} secara horizontal hanya untuk memindai informasi saja. Selain itu, struktur navigasi sistem memiliki hierarki yang sangat dalam, sehingga pengguna memerlukan banyak langkah klik hanya untuk berpindah antar fitur rutin. Keterbatasan antarmuka ini juga terlihat dari tingginya ketergantungan pada fitur "\textit{Import Excel}" untuk input data massal, yang mengindikasikan bahwa formulir input data langsung (\textit{native form}) di dalam aplikasi dinilai tidak efisien oleh pengguna.
+
+Minimnya kualitas antarmuka ini juga menyebabkan alur bisnis menjadi rumit, tidak efisien, dan rentan terhadap kesalahan manusia (\textit{human error}). Pada modul keuangan, ketidakefisienan ini terlihat jelas dari belum terintegrasinya sistem dengan gerbang pembayaran otomatis. Alur yang berjalan saat ini mengharuskan mahasiswa untuk melakukan serangkaian langkah manual yang repetitif: mulai dari melihat tagihan, melakukan transfer via bank, hingga menginput ulang data transfer dan mengunggah bukti bayar ke dalam sistem. Di sisi lain, Admin Keuangan terbebani dengan kewajiban memverifikasi kesesuaian data inputan dan bukti foto satu per satu sebelum memberikan persetujuan. Ketiadaan status \textit{real-time} dalam proses ini sering kali menimbulkan kecemasan (\textit{anxiety}) bagi mahasiswa, terutama menjelang batas akhir pembayaran.
+
+\begin{figure}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.9\textwidth]{image/UserFlow_Pembayaran.png}
+	\caption{\textit{User Flow} Alur Pembayaran Mahasiswa}
+	\label{gambar:userflow_pembayaran}
+\end{figure}
+
+Kompleksitas serupa ditemukan pada alur akademik, khususnya dalam proses perwalian dan pengisian Kartu Rencana Studi (KRS). Mahasiswa dihadapkan pada tabel daftar mata kuliah yang sangat panjang tanpa adanya fitur bantu visual (\textit{visual scheduler}) untuk mendeteksi bentrok jadwal secara intuitif. Akibatnya, pemilihan mata kuliah menjadi proses yang memakan waktu dan rentan kesalahan input. Beban kognitif juga dialami oleh Dosen Wali, yang harus memeriksa pengajuan KRS mahasiswa bimbingannya satu per satu melalui daftar teks tanpa adanya ringkasan visual (\textit{dashboard}) mengenai beban SKS atau riwayat performa akademik mahasiswa, sehingga proses validasi menjadi lambat dan kurang mendalam.
+
+\section{Identifikasi Masalah Pengguna}
+Berdasarkan analisis di atas, berikut adalah permasalahan spesifik pengguna terhadap sistem SIAKAD Universitas X yang menjadi fokus perancangan ulang:
+
+\begin{table}[H]
+	\small
+	\begin{tabular}{|p{1.5cm}|p{6cm}|p{6cm}|}
+		\hline
+		\textbf{Kode} & \textbf{Permasalahan Pengguna} & \textbf{Dampak} \\
+		\hline
+		PU-01 & Pengguna merasa kewalahan saat harus mencari data tertentu karena tampilan didominasi oleh tabel padat yang mengharuskan \textit{scrolling} horizontal tanpa adanya ringkasan visual (\textit{dashboard}). & Efisiensi kerja Admin dan Kaprodi menurun secara signifikan karena waktu habis untuk pencarian data manual. \\
+		\hline
+		PU-02 & Mahasiswa merasa proses pembayaran tidak praktis karena harus menginput ulang data transfer dan mengunggah bukti secara manual, meskipun sudah melakukan transfer bank. & Proses administrasi menjadi lambat dan rentan terhadap kesalahan input data. \\
+		\hline
+		PU-03 & Mahasiswa kesulitan membayangkan susunan jadwal mingguan karena pemilihan mata kuliah hanya berbasis daftar teks panjang tanpa simulasi visual. & Risiko kesalahan perencanaan studi meningkat, menyebabkan mahasiswa sering kali harus melakukan revisi KRS. \\
+		\hline
+		PU-04 & Pengguna baru sering tersesat atau membutuhkan waktu lama untuk menemukan menu yang dibutuhkan karena struktur navigasi yang terlalu dalam dan tersembunyi. & Meningkatkan kurva pembelajaran (\textit{learning curve}) sistem dan menurunkan tingkat adopsi fitur oleh pengguna. \\
+		\hline
+		PU-05 & Pengguna merasa cemas dan ragu apakah data mereka sudah tersimpan atau diproses karena minimnya notifikasi atau umpan balik (\textit{feedback}) yang jelas dari sistem. & Menimbulkan ketidakpercayaan terhadap keandalan sistem dan memicu pengulangan aksi yang tidak perlu. \\
+		\hline
+	\end{tabular}
+\caption{Tabel Permasalahan Pengguna}
+\label{tab:permasalahan_pengguna}
+\end{table}
+
 \section{Analisis Kebutuhan}
-\lipsum[4]
-\subsection{Identifikasi Masalah Pengguna}
-\lipsum[5]
+
 \subsection{Kebutuhan Fungsional}
-\lipsum[6]
+Kebutuhan fungsional dirancang untuk menjawab secara langsung \textit{pain points} pengguna, terutama terkait inefisiensi alur kerja dan ketiadaan fitur bantu visual. Berikut adalah daftar kebutuhan fungsional yang diusulkan:
+
+\begin{table}[H]
+	\small
+	\begin{tabular}{|p{1.5cm}|p{4cm}|p{5cm}|p{1.8cm}|}
+		\hline
+		\textbf{Kode} & \textbf{Kebutuhan Fungsional} & \textbf{Deskripsi Fitur} & \textbf{Referensi Masalah} \\
+		\hline
+		KF-01 & \textit{Dashboard} Akademik Visual & Sistem harus menyediakan halaman utama (\textit{dashboard}) yang menampilkan ringkasan data penting dalam bentuk visual (grafik IPS/IPK, status pembayaran, jumlah SKS diambil) untuk mengurangi beban kognitif membaca tabel. & PU-01 \\
+		\hline
+		KF-02 & Manajemen Pembayaran Terintegrasi & Sistem harus memfasilitasi tampilan riwayat tagihan dan status pembayaran yang jelas tanpa mengharuskan input ulang data manual yang berlebihan. & PU-02 \\
+		\hline
+		KF-03 & \textit{Visual Scheduler} (KRS) & Sistem harus menyediakan fitur simulasi jadwal mingguan berbasis kalender visual saat mahasiswa memilih mata kuliah, yang secara otomatis mendeteksi dan memberi peringatan jika terjadi bentrok jadwal. & PU-03 \\
+		\hline
+		KF-04 & Navigasi Terstruktur (\textit{Simplified Sidebar}) & Sistem harus memiliki struktur navigasi yang dikelompokkan berdasarkan konteks tugas dengan kedalaman menu maksimal 2 level untuk mempercepat akses fitur. & PU-04 \\
+		\hline
+		KF-05 & Pusat Notifikasi \& \textit{Feedback} & Sistem harus memberikan umpan balik visual (\textit{toast message}, \textit{modal}, atau perubahan status warna) secara \textit{real-time} setiap kali pengguna berhasil atau gagal melakukan aksi (simpan, hapus, validasi). & PU-05 \\
+		\hline
+	\end{tabular}
+\caption{Tabel Kebutuhan Fungsional (1)}
+\label{tab:kebutuhan_fungsional_1}
+\end{table}
+
+\begin{table}[t]
+	\small
+	\begin{tabular}{|p{1.5cm}|p{4cm}|p{5cm}|p{1.8cm}|}
+		\hline
+		\textbf{Kode} & \textbf{Kebutuhan Fungsional} & \textbf{Deskripsi Fitur} & \textbf{Referensi Masalah} \\
+		\hline
+		KF-06 & Validasi Perwalian Cepat & Sistem harus menyediakan tampilan ringkasan perwalian bagi Dosen Wali yang memungkinkan persetujuan KRS dilakukan dengan lebih efisien, dilengkapi data pendukung performa mahasiswa. & PU-01, PU-03 \\
+		\hline
+	\end{tabular}
+\caption{Tabel Kebutuhan Fungsional (2)}
+\label{tab:kebutuhan_fungsional_2}
+\end{table}
+
 \subsection{Kebutuhan Nonfungsional}
-\lipsum[7]
+Kebutuhan nonfungsional berfokus pada aspek kualitas pengalaman pengguna (\textit{User Experience}) dan performa antarmuka sesuai dengan prinsip desain interaksi yang telah dibahas pada Bab 2.
+
+\begin{table}[H]
+	\small
+	\begin{tabular}{|p{1.5cm}|p{3.5cm}|p{9cm}|}
+		\hline
+		\textbf{Kode} & \textbf{Kategori} & \textbf{Deskripsi Kebutuhan} \\
+		\hline
+		KNF-01 & \textit{Learnability} & Antarmuka harus menggunakan bahasa, ikon, dan pola desain yang familier sehingga pengguna baru dapat memahami cara penggunaan sistem dalam waktu singkat tanpa pelatihan intensif. \\
+		\hline
+		KNF-02 & \textit{Efficiency} & Sistem harus meminimalkan jumlah klik (\textit{clicks}) dan perpindahan halaman (\textit{page loads}) untuk menyelesaikan tugas-tugas rutin seperti pengisian KRS dan pengecekan nilai. \\
+		\hline
+		KNF-03 & \textit{Visibility \& Feedback} & Sistem harus selalu memberikan status sistem yang jelas (misal: \textit{loading state}, \textit{empty state}, \textit{success state}) dalam waktu respons yang wajar ($<$ 2 detik). \\
+		\hline
+		KNF-04 & \textit{Aesthetic \& Minimalist Design} & Antarmuka harus menghindari elemen visual yang tidak relevan (dekoratif berlebih) yang dapat mengalihkan perhatian pengguna dari data utama. \\
+		\hline
+		KNF-05 & \textit{Responsiveness} & Tata letak antarmuka harus bersifat responsif, dapat menyesuaikan tampilan dengan baik pada berbagai ukuran layar (\textit{desktop} dan tablet) tanpa merusak struktur informasi. \\
+		\hline
+	\end{tabular}
+\caption{Kebutuhan Nonfungsional}
+\label{tab:kebutuhan_nonfungsional}
+\end{table}
 
 \section{Analisis Pemilihan Solusi}
+Dalam konteks perancangan ulang antarmuka sistem yang sudah berjalan secara fungsional seperti SIAKAD Universitas X, pemilihan pendekatan desain interaksi menjadi titik krusial untuk memastikan bahwa hasil rancangan tidak hanya bernilai estetis, tetapi juga dapat memecahkan akar permasalahan pengguna.
+
 \subsection{Alternatif Solusi}
-\lipsum[8]
+Berdasarkan analisis kondisi saat ini dan kebutuhan pengguna, alternatif solusi pada penelitian ini difokuskan pada pemilihan pendekatan desain interaksi yang akan digunakan dalam proses perancangan ulang antarmuka \textit{website} SIAKAD. Berdasarkan tinjauan literatur pada Bab 2, terdapat empat pendekatan utama yang dipertimbangkan sebagai alternatif solusi.
+
+\begin{enumerate}
+\item \textbf{Pendekatan \textit{User Centered Design}}
+
+Pendekatan \textit{User Centered Design} (UCD) menempatkan mahasiswa, dosen, dan tenaga kependidikan sebagai pusat dari seluruh proses perancangan. Proses ini dimulai dengan riset pengguna yang mendalam untuk memahami \textit{pain points} spesifik, seperti kebingungan saat pengisian KRS atau kesulitan memantau status pembayaran. Solusi desain akan dihasilkan melalui siklus iteratif yang melibatkan evaluasi langsung dengan pengguna. Karena berfokus utama pada kebutuhan, keterbatasan, dan konteks penggunaan, relevansi pendekatan ini dinilai sangat tinggi untuk mengatasi masalah \textit{usability} yang menjadi keluhan utama pengguna saat ini.
+
+\item \textbf{Pendekatan \textit{Activity Centered Design}}
+
+Pendekatan \textit{Activity Centered Design} (ACD) berfokus pada aktivitas-aktivitas inti yang harus dilakukan dan diselesaikan oleh pengguna, seperti pengisian KRS dan penginputan nilai, daripada preferensi individual pengguna itu sendiri, tanpa terlalu menonjolkan perbedaan karakteristik tiap kelompok pengguna. Dengan fokus pada aktivitas, alur tugas, dan fungsionalitas sistem, desain diarahkan untuk mengoptimalkan efisiensi penyelesaian tugas. Pendekatan ini dinilai cocok untuk sistem dengan alur kerja yang sangat kaku, namun memiliki risiko karena cenderung mengabaikan aspek pengalaman emosional pengguna (\textit{User Experience Goals}) yang menjadi salah satu tujuan perbaikan.
+
+\item \textbf{Pendekatan \textit{Systems Design}}
+
+Pendekatan \textit{Systems Design} memandang antarmuka sebagai komponen integral dari sistem organisasi yang lebih besar. Pendekatan ini memusatkan perhatian pada komponen sistem, arsitektur, dan konteks organisasi untuk memastikan integritas data serta keselarasan dengan proses bisnis institusi yang sudah mapan. Meskipun pendekatan ini sangat baik untuk menjaga kestabilan \textit{backend}, penerapannya seringkali menghasilkan antarmuka yang kaku dan sulit dipelajari (\textit{steep learning curve}) oleh pengguna awam karena kurang memprioritaskan aspek interaksi manusia.
+
+\item \textbf{Pendekatan \textit{Genius Design}}
+
+Pendekatan \textit{Genius Design} mengandalkan keahlian dan intuisi desainer semata tanpa melibatkan pengguna secara intensif dalam proses perancangan. Dalam pendekatan ini, desainer menggunakan \textit{best practice} dan pengalaman pribadinya untuk menciptakan solusi dengan fokus pada intuisi dan inovasi cepat. Walaupun pendekatan ini efisien dari segi waktu, risiko kegagalan adopsi dinilai tinggi karena hasil desain tidak tervalidasi secara empiris oleh pengguna asli di lingkungan Universitas X.
+
+\end{enumerate}
+
 \subsection{Analisis Penentuan Solusi}
-\lipsum[9]
+Untuk menentukan pendekatan terbaik, dilakukan analisis perbandingan kualitatif dan kuantitatif terhadap keempat alternatif di atas. Analisis kualitatif dilakukan untuk mengidentifikasi kelebihan dan kekurangan dari masing-masing pendekatan desain berdasarkan karakteristik dan prinsip dasarnya. Hasil analisis kelebihan dan kekurangan masing-masing alternatif disajikan pada Tabel \ref{tab:kelebihan_kekurangan_1} dan Tabel \ref{tab:kelebihan_kekurangan_2}.
+
+\begin{table}[H]
+	\small
+	\begin{tabular}{|p{3.5cm}|p{5cm}|p{5cm}|}
+		\hline
+		\textbf{Alternatif Solusi} & \textbf{Kelebihan} & \textbf{Kekurangan} \\
+		\hline
+		Alternatif 1 - Pendekatan \textit{User Centered Design} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Solusi sangat relevan dengan masalah nyata pengguna.
+			\item Risiko penolakan sistem rendah karena pengguna dilibatkan sejak awal.
+			\item Meningkatkan kepuasan pengguna secara signifikan.
+		\end{itemize} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Membutuhkan waktu lebih lama untuk fase riset dan evaluasi.
+			\item Memerlukan koordinasi dengan berbagai tipe pengguna secara intensif.
+		\end{itemize} \\
+		\hline
+		Alternatif 2 - Pendekatan \textit{Activity Centered Design} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Sangat efisien dalam menyederhanakan alur kerja yang kompleks.
+			\item Fokus pada penyelesaian tugas (\textit{task completion}).
+		\end{itemize} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Kurang peka terhadap perbedaan karakteristik pengguna (misal: mahasiswa baru vs mahasiswa tingkat akhir).
+			\item Cenderung kaku.
+		\end{itemize} \\
+		\hline
+	\end{tabular}
+\caption{Kelebihan dan Kekurangan Alternatif (1)}
+\label{tab:kelebihan_kekurangan_1}
+\end{table}
+
+\begin{table}[t]
+	\small
+	\begin{tabular}{|p{3.5cm}|p{5cm}|p{5cm}|}
+		\hline
+		\textbf{Alternatif Solusi} & \textbf{Kelebihan} & \textbf{Kekurangan} \\
+		\hline
+		Alternatif 3 - Pendekatan \textit{Systems Design} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Menjamin integritas struktur dan data akademik.
+			\item Selaras dengan arsitektur sistem yang sudah ada.
+		\end{itemize} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Sering mengabaikan aspek \textit{usability} dan kenyamanan pengguna.
+			\item Antarmuka cenderung "\textit{system-oriented}" bukan "\textit{human-oriented}".
+		\end{itemize} \\
+		\hline
+		Alternatif 4 - Pendekatan \textit{Genius Design} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Proses pengembangan sangat cepat.
+			\item Memungkinkan inovasi desain yang radikal.
+		\end{itemize} & 
+		\begin{itemize}[leftmargin=*, topsep=0pt, partopsep=0pt, itemsep=2pt]
+			\item Sangat bergantung pada subjektivitas desainer.
+			\item Risiko tinggi desain tidak sesuai dengan \textit{mental model} pengguna awam.
+		\end{itemize} \\
+		\hline
+	\end{tabular}
+\caption{Kelebihan dan Kekurangan Alternatif (2)}
+\label{tab:kelebihan_kekurangan_2}
+\end{table}
+
+Selanjutnya, analisis kuantitatif dilakukan menggunakan metode \textit{Weighted Scoring Matrix} untuk memberikan penilaian objektif dan terukur terhadap setiap alternatif berdasarkan kriteria-kriteria yang telah ditetapkan. Secara umum, perhitungan total skor ($S$) untuk setiap alternatif solusi dilakukan dengan menjumlahkan hasil perkalian antara bobot kriteria ($W$) dan skor penilaian ($N$). Rumus perhitungannya adalah sebagai berikut:
+
+\begin{equation}
+S = \sum_{i=1}^{n} (W_{i} \times N_{i})
+\label{eq:weighted_score}
+\end{equation}
+
+\noindent Dimana:
+
+\begin{itemize}
+\item $S$ = Total skor berbobot untuk alternatif solusi
+\item $n$ = Jumlah kriteria penilaian
+\item $W_{i}$ = Bobot yang diberikan untuk kriteria ke-$i$
+\item $N_{i}$ = Nilai skor yang diperoleh alternatif solusi pada kriteria ke-$i$
+\end{itemize}
+
+Adapun dasar penetapan bobot untuk setiap kriteria adalah sebagai berikut:
+
+\begin{enumerate}
+\item \textbf{Fokus Pengguna (Bobot 35\%)}: Kriteria ini menjamin solusi yang dihasilkan berpusat pada kebutuhan manusia (\textit{human-centered}).
+\item \textbf{Mitigasi Risiko (Bobot 25\%)}: Kriteria ini untuk meminimalkan risiko kesalahan rancangan yang mungkin terjadi sebelum diimplementasikan ke sistem akademik yang kritis.
+\item \textbf{Kesesuaian Konteks (Bobot 20\%)}: Kriteria ini memastikan metode yang dipilih mampu mengakomodasi kompleksitas fitur akademik di Universitas X.
+\item \textbf{Keberlanjutan (Bobot 20\%)}: Kriteria ini menilai potensi desain untuk bertahan lama, mudah dipelajari (\textit{learnability}), dan diadopsi oleh pengguna.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{table}[h]
+	\small
+	\begin{tabular}{|p{3.5cm}|c|p{2cm}|p{2cm}|p{2.2cm}|p{2cm}|}
+		\hline
+		\textbf{Kriteria} & \textbf{Bobot} & \textbf{Alternatif 1: UCD} & \textbf{Alternatif 2: ACD} & \textbf{Alternatif 3: Systems} & \textbf{Alternatif 4: Genius} \\
+		\hline
+		Fokus Pengguna & 35\% & 5 & 3 & 2 & 2 \\
+		\hline
+		Mitigasi Risiko & 25\% & 5 & 4 & 3 & 1 \\
+		\hline
+		Kesesuaian Konteks & 20\% & 4 & 5 & 5 & 3 \\
+		\hline
+		Keberlanjutan & 20\% & 5 & 3 & 3 & 2 \\
+		\hline
+		\textbf{TOTAL} & \textbf{100\%} & \textbf{4,80} & \textbf{3,65} & \textbf{3,05} & \textbf{1,95} \\
+		\hline
+	\end{tabular}
+\caption{\textit{Weighted Scoring Matrix} Pemilihan Pendekatan Desain}
+\label{tab:weighted_scoring}
+\end{table}
+
+Berdasarkan hasil perhitungan pada \textit{Weighted Scoring Matrix}, Pendekatan \textit{User Centered Design} (UCD) memperoleh total skor tertinggi yaitu 4,80. Hal ini mengonfirmasi bahwa UCD adalah metode yang paling tepat untuk digunakan dalam penelitian ini, mengingat keunggulannya yang signifikan dalam aspek fokus pengguna dan mitigasi risiko kegagalan desain.

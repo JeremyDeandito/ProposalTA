@@ -3,7 +3,43 @@
 % ==========================================
 \chapter{DESAIN KONSEP SOLUSI}
 \label{chap:desain-konsep-solusi}
-Ilustrasikan desain konsep solusi dalam bentuk model konseptual dan penjelasan secara ringkas, 
-beserta perbedaannya dengan sistem saat ini. Ilustrasi harus dapat dibandingkan (\textit{before} and \textit{after}). 
-Karena masih berupa proposal, bab ini hanya berisi gambar desain konsep solusi tersebut dan 
-penjelasan perbandingannya dengan gambar sistem yang ada saat ini (yang tergambar di awal Bab \ref{chap:analisis-masalah}).
+
+\section{Rancangan Solusi}
+Perancangan ulang antarmuka SIAKAD Universitas X akan dilakukan dengan pendekatan \textit{User Centered Design} (UCD) sebagai metodologi solusi terpilih. Pendekatan ini diadopsi untuk memastikan bahwa solusi desain yang dihasilkan tidak hanya estetis, tetapi juga secara fungsional mampu menjawab \textit{pain points} utama pengguna, seperti kesulitan navigasi dan inefisiensi alur administrasi. Keunggulan utama pendekatan UCD terletak pada siklus iteratifnya yang melibatkan pengguna secara aktif di setiap tahapan, mulai dari analisis konteks hingga evaluasi desain. Dengan menempatkan kebutuhan mahasiswa dan dosen sebagai prioritas utama, perancangan ini bertujuan menciptakan pengalaman pengguna yang lebih intuitif, meminimalisir beban kognitif, dan meningkatkan efisiensi operasional sistem secara keseluruhan.
+
+Sebagai salah satu contoh implementasi konkret dari pendekatan ini, penelitian akan memfokuskan perubahan pada fitur-fitur krusial yang memiliki dampak tinggi terhadap kepuasan pengguna, salah satunya adalah perancangan ulang modul pembayaran. Dalam sistem saat ini, mahasiswa dihadapkan pada fragmentasi alur kerja yang memaksa mereka melakukan tiga proses terpisah: pengecekan tagihan, transfer ke ATM/Bank, dan input ulang bukti bayar untuk verifikasi. Melalui desain solusi yang baru, proses ini akan disederhanakan menjadi satu alur kerja terintegrasi (\textit{streamlined workflow}). Sistem akan dirancang untuk menyatukan informasi tagihan dengan gerbang pembayaran, sehingga mahasiswa tidak perlu lagi mengisi formulir konfirmasi secara manual. Otomatisasi ini tidak hanya memangkas waktu proses secara drastis, tetapi juga menghilangkan kecemasan pengguna terkait status pembayaran yang sebelumnya harus menunggu verifikasi manual dari admin.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.9\textwidth]{image/UserFlowBaru.png}
+	\caption{\textit{User Flow} Alur Pembayaran Mahasiswa Baru}
+	\label{gambar:userflow_pembayaran_baru}
+\end{figure}
+
+Inisiatif perancangan ulang ini tidak hanya terbatas pada perancangan ulang fitur spesifik, melainkan mencakup transformasi menyeluruh terhadap arsitektur informasi dan tata letak antarmuka \textit{website} SIAKAD Universitas X. Tujuannya adalah menghadirkan ekosistem digital yang responsif dan adaptif terhadap perilaku pengguna modern. Fokus utama perancangan ulang akan diarahkan pada penyederhanaan alur bisnis yang selama ini menjadi titik friksi utama, khususnya pada modul akademik dan keuangan. Alur kerja yang sebelumnya dinilai terlalu kompleks, kaku, dan tidak ramah pengguna akan direstrukturisasi menjadi proses yang lebih ringkas dan intuitif. Harapannya, transformasi antarmuka SIAKAD Universitas X ini dapat menjadi fondasi yang kokoh bagi pengembangan fitur masa depan, serta membuka peluang ekspansi ekosistem akademik ke berbagai platform perangkat selain \textit{desktop} (\textit{multi-device ecosystem}).
+
+\section{\textit{Benchmarking}}
+Sebagai fondasi awal dalam merumuskan standar desain yang optimal, penelitian ini juga melakukan studi komparasi (\textit{benchmarking}) terhadap platform serupa yang memiliki karakteristik setara.
+
+\subsection{SIAKAD Institut Teknologi Bandung (SIX ITB)}
+Sistem ini dipilih karena memiliki kompleksitas akademik yang setara dengan Universitas X. Fitur unggulan yang menjadi fokus utama dalam \textit{benchmarking} ini adalah \textit{Visual Weekly Scheduler}. Berbeda dengan SIAKAD Universitas X yang saat ini hanya menyajikan jadwal dalam bentuk tabel teks statis, SIX ITB menampilkan jadwal perkuliahan dalam format kalender mingguan yang interaktif. Konsep visualisasi ini akan diadaptasi dalam desain solusi untuk membantu mahasiswa mendeteksi bentrok jadwal (\textit{schedule clash}) secara visual dan intuitif saat menyusun rencana studi.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.9\textwidth]{image/six.png}
+	\caption{\textit{Visual Weekly Scheduler} pada SIX ITB}
+	\label{gambar:six_itb}
+\end{figure}
+
+\subsection{Sistem Informasi Akademik ITS (SIAKAD ITS / myITS)}
+Sistem akademik Institut Teknologi Sepuluh Nopember (ITS) dipilih sebagai referensi \textit{benchmarking} utama untuk konsep antarmuka terpusat. Fokus inspirasi yang diambil adalah fitur Dasbor Terintegrasi (\textit{Unified Dashboard}) pada laman myITS. myITS menyajikan seluruh aktivitas penting (seperti Akademik, Kelas Daring, dan Kemahasiswaan) dalam bentuk kartu akses cepat (\textit{quick access cards}) di halaman muka. Selain itu, dasbor ini menampilkan \textit{widget} informasi personal yang dinamis, seperti ringkasan IPK/IPS dan status studi, yang memungkinkan mahasiswa memantau performa akademik mereka secara sekilas tanpa perlu melakukan navigasi yang berbelit. Konsep penyajian informasi yang ringkas dan terpusat inilah yang akan diadopsi untuk mengatasi masalah disorientasi navigasi dan kesulitan pencarian informasi di Universitas X.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.9\textwidth]{image/myits.png}
+	\caption{Dasbor Terintegrasi pada myITS}
+	\label{gambar:myits}
+\end{figure}

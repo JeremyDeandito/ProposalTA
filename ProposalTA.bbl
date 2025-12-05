@@ -417,6 +417,45 @@
       \verb 10.12973/eu-jer.15.1.79
       \endverb
     \endentry
+    \entry{sauro2016quantifying}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f24e1723133e0393dfd185716f640bed}{%
+           family={Sauro},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f106a761a58d4041d103c16ce4f11cf1}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={James\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{fullhash}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{fullhashraw}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{bibnamehash}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{authorbibnamehash}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{authornamehash}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{authorfullhash}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \strng{authorfullhashraw}{2bd800a0c0f35e9bdff73ae39f24dbb0}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Quantifying the User Experience: Practical Statistics for User Research}
+      \field{year}{2016}
+    \endentry
     \entry{Weinhandl2024}{article}{}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=f556f2fb2cb2f1a3b705dafc70f1ea88}{%
@@ -540,8 +579,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{laudon2020}
-  \missing{pressman2019}
 \endrefsection
 \endinput
 

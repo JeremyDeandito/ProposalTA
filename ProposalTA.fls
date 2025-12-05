@@ -1,0 +1,20 @@
+PWD c:\Jeremy\Kuliah\TUGAS AKHIR\ProposalTA-STI
+INPUT C:\Users\Jeremy\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Jeremy\Kuliah\TUGAS AKHIR\ProposalTA-STI\ProposalTA.tex
+OUTPUT ProposalTA.log
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\Jeremy\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def

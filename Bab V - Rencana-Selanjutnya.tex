@@ -3,9 +3,101 @@
 % ==========================================
 \chapter{RENCANA SELANJUTNYA}
 \label{chap:rencana-selanjutnya}
-Jelaskan secara detail langkah-langkah rencana selanjutnya, hal-hal yang diperlukan atau akan disiapkan, dan risiko dan mitigasinya, yang meliputi:
+
+\section{Jadwal dan Rencana Implementasi}
+Berdasarkan metodologi UCD, jadwal dan rencana implementasi untuk perancangan ulang antarmuka SIAKAD Universitas X dijelaskan pada Tabel \ref{tab:jadwal_implementasi}.
+
+\definecolor{myorange}{RGB}{255,165,0}
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{5cm}|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Kegiatan}}} & \multicolumn{12}{c|}{\textbf{Minggu ke-}} \\ \cline{2-13}
+\multicolumn{1}{|c|}{} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\ \hline
+\textit{Understand and specify the context of use} & \cellcolor{myorange} & \cellcolor{myorange} & \cellcolor{myorange} & & & & & & & & & \\ \hline
+\textit{Specify user requirements} & & & & \cellcolor{myorange} & & & & & & & & \\ \hline
+\textit{Design Solutions} \newline ($1^{st}$ \textit{iteration}) & & & & & \cellcolor{myorange} & \cellcolor{myorange} & \cellcolor{myorange} & & & & & \\ \hline
+\textit{Evaluations against requirements} \newline ($1^{st}$ \textit{iteration}) & & & & & & & & \cellcolor{myorange} & \cellcolor{myorange} & & & \\ \hline
+\textit{Design Solutions} \newline ($2^{nd}$ \textit{iteration}) & & & & & & & & & & \cellcolor{myorange} & \cellcolor{myorange} & \\ \hline
+\textit{Evaluations against requirements} \newline ($2^{nd}$ \textit{iteration}) & & & & & & & & & & & & \cellcolor{myorange} \\ \hline
+\end{tabular}
+\caption{Jadwal Implementasi}
+\label{tab:jadwal_implementasi}
+\end{table}
+
 \begin{enumerate}
-\item	Rencana implementasi, termasuk alat dan bahan yang diperlukan, lingkungan, konfigurasi, biaya, dan sebagainya.
-\item	Desain pengujian dan evaluasi, misalnya metode verifikasi dan validasi.
-\item	Analisis risiko dan mitigasi, misalnya tindakan selanjutnya jika ada yang tidak berjalan sesuai rencana.
+\item \textbf{\textit{Understanding and Specifying the Context of Use} (Minggu 1-3)}
+
+Pada tahap pengembangan ini, dilakukan pengumpulan data mendalam melalui wawancara terstruktur dan penyebaran kuesioner kepada mahasiswa,dosen, dan tenaga kependidikan Universitas X. Tujuannya adalah untuk memetakan karakteristik pengguna (\textit{user profiling}), menganalisis tugas-tugas utama yang sering dilakukan (\textit{task analysis}), serta mengidentifikasi kendala lingkungan fisik atau teknis yang mempengaruhi penggunaan sistem.
+
+\item \textbf{\textit{Specifying the User Requirements} (Minggu 4)}
+
+Data dari tahap sebelumnya dianalisis untuk merumuskan spesifikasi kebutuhan pengguna (\textit{user requirements}). Tahap ini bertujuan menetapkan kebutuhan fungsional antarmuka dan kebutuhan nonfungsional dengan luaran berupa \textit{User Persona} dan \textit{User Journey Map} yang menjadi acuan utama dalam proses desain.
+
+\item \textbf{\textit{First Iteration of Design Solutions} (Minggu 5-7)}
+
+Tahap ini akan berfokus pada pembuatan arsitektur informasi (\textit{Information Architecture}), \textit{Wireframe}, dan pengembangan \textit{High-Fidelity Prototype} menggunakan Figma.
+
+\item \textbf{\textit{First Iteration of Evaluating Against Requirements} (Minggu 8-9)}
+
+Tahap pertama evaluasi akan dilakukan menggunakan metode pengujian SUS, SEQ, TCR, dan ToT dengan melibatkan pengguna representatif baik secara daring maupun luring. Hasil evaluasi ini digunakan sebagai dasar untuk perbaikan desain di iterasi selanjutnya.
+
+\item \textbf{\textit{Second Iteration of Design Solutions} (Minggu 10-11)}
+
+Tahap ini akan berfokus pada revisi purwarupa pertama berdasarkan hasil umpan balik pengguna pada tahap evaluasi pertama.
+
+\item \textbf{\textit{Second Iteration of Evaluating Against Requirements} (Minggu 12)}
+
+Tahap kedua evaluasi akan dilakukan menggunakan metode yang sama seperti tahap pertama untuk memastikan bahwa desain telah memenuhi kebutuhan fungsional dan nonfungsional serta memecahkan permasalahan pengguna.
 \end{enumerate}
+
+\section{Rencana Evaluasi}
+Evaluasi \textit{usability} pada penelitian ini dirancang untuk menilai apakah purwarupa antarmuka SIAKAD hasil perancangan ulang sudah mendukung efektivitas, efisiensi, dan kepuasan pengguna sesuai tujuan penelitian dan metodologi UCD yang digunakan.
+
+Metode pengujian yang digunakan adalah \textit{usability testing} berbasis tugas pada purwarupa \textit{high-fidelity}. Partisipan berasal dari pengguna representatif SIAKAD yang terdiri dari mahasiswa dan juga dosen. Pengguna akan menyelesaikan beberapa skenario tugas nyata, seperti mengisi KRS atau melihat status pembayaran dengan menggunakan purwarupa antarmuka yang baru.
+
+Selama pengujian, akan dikumpulkan dua jenis data utama. Data kuantitatif mencakup TCR untuk melihat apakah tugas berhasil atau gagal, ToT untuk mengukur waktu yang dibutuhkan pengguna dalam menyelesaikan tugas, SEQ untuk menilai tingkat kemudahan setiap tugas menggunakan skala 7 poin, serta SUS untuk menilai \textit{usability} sistem secara keseluruhan melalui kuesioner 10 pernyataan di akhir sesi. Selain itu, data kualitatif berupa komentar singkat dari pengguna mengenai bagian antarmuka yang membingungkan atau membantu juga akan dikumpulkan secara opsional sebagai bahan untuk menjelaskan dan memperkirakan hasil metrik kuantitatif. Adapun kriteria keberhasilan pengujian dijelaskan dalam Tabel \ref{tab:kriteria_keberhasilan}.
+
+\begin{table}[H]
+	\small
+	\begin{tabular}{|p{6cm}|p{8cm}|}
+		\hline
+		\textbf{Metrik} & \textbf{Kriteria Keberhasilan} \\
+		\hline
+		\textit{Task Completion Rate} (TCR) & Minimal 80\% tugas kunci dapat diselesaikan pengguna tanpa bantuan kritis. \\
+		\hline
+		\textit{Time on Task} (ToT) & Rata-rata waktu penyelesaian tugas kunci tidak lebih lama dibanding alur pada sistem saat ini dan menunjukkan waktu yang wajar untuk kompleksitas tugas. \\
+		\hline
+		\textit{Single Ease Question} (SEQ) & Rata-rata skor SEQ untuk tiap tugas berada di atas titik tengah skala ($\geq$ 5 dari 7). \\
+		\hline
+		\textit{System Usability Scale} (SUS) & Rata-rata skor SUS purwarupa berada pada kategori minimal "\textit{Good}", yaitu $\geq$ 68. \\
+		\hline
+	\end{tabular}
+\caption{Kriteria Keberhasilan Evaluasi}
+\label{tab:kriteria_keberhasilan}
+\end{table}
+
+\section{Analisis Risiko dan Mitigasi}
+Pelaksanaan tugas akhir ini berpotensi menghadapi beberapa risiko yang dapat mempengaruhi kelancaran proses maupun kualitas hasil. Tabel \ref{tab:risiko_mitigasi} berikut merangkum risiko utama beserta strategi mitigasinya.
+
+\begin{table}[H]
+	\small
+	\begin{tabular}{|p{1.5cm}|p{5cm}|p{7cm}|}
+		\hline
+		\textbf{Kode} & \textbf{Risiko} & \textbf{Mitigasi} \\
+		\hline
+		R1 & Kesulitan merekrut partisipan pengguna (mahasiswa/dosen/tendik) untuk studi konteks dan \textit{usability testing}. & Bekerja sama dengan pihak program studi/fakultas untuk penyebaran undangan. Menggunakan beberapa kanal (email, grup resmi, kelas). Memberikan penjadwalan yang fleksibel. \\
+		\hline
+		R2 & Keterbatasan waktu untuk melakukan dua iterasi desain dan evaluasi. & Menyusun jadwal rinci per minggu. Memprioritaskan skenario tugas paling kritis. Menyiapkan \textit{template} instrumen pengujian dari awal. \\
+		\hline
+		R3 & Ruang lingkup fitur yang terlalu lebar sehingga desain menjadi tidak fokus. & Mempertegas perancangan ulang hanya berdasarkan atas fitur yang sudah di implementasi dan sudah berjalan secara fungsional. \\
+		\hline
+		R4 & Perbedaan ekspektasi antara pembimbing dan pemangku kepentingan di universitas. & Melakukan penyelarasan sejak awal dengan pembimbing terkait ruang lingkup dan \textit{deliverable}, serta menyiapkan artefak visual (\textit{user flow}, \textit{wireframe}) untuk diskusi berkala. \\
+		\hline
+	\end{tabular}
+\caption{Analisis Risiko dan Mitigasi}
+\label{tab:risiko_mitigasi}
+\end{table}
