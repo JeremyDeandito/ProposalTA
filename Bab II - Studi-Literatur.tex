@@ -3,287 +3,200 @@
 % ==========================================
 \chapter{STUDI LITERATUR}
 \label{chap:studi-literatur}
-\section{Penulisan Gambar, Tabel, Rumus, dan Kode}
-\lipsum[1]
 
-\subsection{Gambar}
-Contoh gambar dapat dilihat pada Gambar \ref{gambar:jaringan}. Gambar dan judulnya diposisikan di tengah. Nomor gambar tidak diakhiri tanda titik. Gambar tersebut dibuat menggunakan aplikasi draw.io dan disimpan ke format PNG setelah dengan zoom setting pada angka 300\%. Ukuran gambar yang ditampilkan dapat diatur dengan mengubah nilai \textit{width} dalam sintaks \textit{includegraphics}.
+\section{Sistem Informasi Akademik}
+Sistem Informasi Akademik (SIAKAD) merupakan sistem informasi yang dirancang khusus untuk mengelola dan mengintegrasikan seluruh proses akademik di perguruan tinggi. SIAKAD berfungsi sebagai platform digital yang menghubungkan berbagai pemangku kepentingan (\textit{stakeholder}) akademik, yaitu mahasiswa, dosen, dan tenaga kependidikan, dalam menjalankan aktivitas akademik sehari-hari. Aktivitas tersebut meliputi pengisian Kartu Rencana Studi (KRS), pengelolaan nilai, pemantauan jadwal perkuliahan, pengumuman akademik, dan akses terhadap informasi akademik lainnya.
 
-\begin{figure}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-	\centering
-  \captionsetup{justification=centering}
-    	\includegraphics[width=0.7\textwidth]{image/gambar1.png}
-	\caption{Contoh gambar jaringan}
-	\label{gambar:jaringan}
-\end{figure}
+Dalam konteks pendidikan tinggi modern, SIAKAD telah berkembang menjadi komponen kunci dalam ekosistem digital kampus. Menurut \textcite{Sangsuwan2025}, sistem informasi digital dalam pendidikan menawarkan keunggulan signifikan dibandingkan sistem manual tradisional, terutama dalam hal aksesibilitas, pembaruan konten waktu nyata (\textit{real-time content updates}), pengalaman yang dipersonalisasi, dan keberlanjutan lingkungan. Studi terbaru menegaskan bahwa transformasi digital ini secara fundamental mengubah cara mahasiswa belajar, termasuk dampaknya terhadap hasil belajar, motivasi, kognisi, dan keterlibatan dalam lingkungan pendidikan (Joshi et al., 2025). Oleh karena itu, SIAKAD yang dirancang dengan baik tidak hanya meningkatkan efisiensi administrasi akademik, tetapi juga berperan penting dalam meningkatkan pengalaman belajar mahasiswa dan efektivitas pengelolaan institusi.
 
-Gambar umumnya tidak jelas atau kabur jika gambar tersebut:
-\begin{enumerate}[a.]
-  \item diperoleh dari hasil cropping pada suatu halaman buku atau situs web;
-  \item hasil pembesaran gambar yang gambar aslinya sebenarnya berukuran kecil; atau
-  \item disimpan dalam resolusi kecil
+\section{Desain Interaksi}
+Desain Interaksi (\textit{Interaction Design}) adalah disiplin ilmu yang berfokus pada perancangan produk dan sistem interaktif yang mendukung cara orang berkomunikasi dan berinteraksi dalam kehidupan sehari-hari, baik untuk bekerja maupun untuk kegiatan lainnya \cite{rogers2023interaction}. Menurut \textcite{rogers2023interaction}, desain interaksi melibatkan pemahaman tentang siapa pengguna, apa yang mereka lakukan, dimana mereka melakukannya, dan bagaimana menciptakan pengalaman yang efektif, efisien, dan memuaskan ketika mereka berinteraksi dengan teknologi. Tujuan utama dari desain interaksi adalah menciptakan produk yang mudah dipelajari, efektif untuk digunakan, dan memberikan pengalaman pengguna yang menyenangkan.
+
+Desain interaksi bersifat multidisipliner. Hal ini dikarenakan desain interaksi mengintegrasikan pengetahuan dari berbagai bidang termasuk desain produk, ilmu komputer, psikologi kognitif dan sosial, ergonomi, serta seni dan desain \cite{rogers2023interaction}. Pendekatan multidisipliner ini memungkinkan perancang untuk mempertimbangkan tidak hanya aspek teknis sistem, tetapi juga aspek kognitif, emosional, dan sosial dari pengalaman pengguna. Dalam pelaksanaannya, desain interaksi mencakup pengaturan alur kerja, struktur navigasi, jenis umpan balik, dan mekanisme penanganan kesalahan yang berkontribusi pada kualitas interaksi pengguna.
+
+\subsection{Pendekatan Desain Interaksi}
+Berdasarkan \textcite{rogers2023interaction} yang mengutip dari Dan Saffer, ada empat pendekatan utama dalam desain interaksi, yaitu \textit{User Centered Design}, \textit{Activity Centered Design}, \textit{Systems Design}, dan \textit{Genius Design}. Setiap pendekatan yang ada memiliki filosofi, fokus utama, serta metode yang berbeda-beda. Pemahaman terhadap keempat pendekatan ini penting untuk memilih strategi desain yang paling sesuai dengan konteks dan tujuan proyek.
+
+\subsubsection{\textit{User Centered Design}}
+\textit{User Centered Design} (UCD) adalah pendekatan desain yang menempatkan pengguna sebagai pusat dari seluruh proses perancangan. Produk yang dirancang dengan pendekatan ini harus disesuaikan dengan kebutuhan, karakteristik, dan konteks pengguna, bukan memaksa pengguna untuk menyesuaikan diri dengan sistem yang akan dirancang. UCD menekankan keterlibatan aktif pengguna dari tahapan awal hingga evaluasi akhir pengembangan produk \cite{rogers2023interaction}.
+
+Menurut ISO 9241-210:2019, langkah-langkah yang dilakukan dalam \textit{User Centered Design} adalah sebagai berikut:
+
+\begin{enumerate}
+\item \textbf{\textit{Understanding and Specifying the Context of Use}}
+
+Tahapan ini berfokus pada proses identifikasi siapa pengguna sistem, apa karakteristik mereka, tugas apa yang akan mereka kerjakan, serta kondisi lingkungan dimana sistem tersebut akan digunakan.
+
+\item \textbf{\textit{Specifying the User Requirements}}
+
+Tahapan ini berfokus pada perumusan kebutuhan fungsional dan nonfungsional yang harus dipenuhi agar sistem dapat membantu pengguna mencapai tujuannya dengan efektif. Proses perumusan harus berdasar pada konteks yang telah dipahami di tahapan sebelumnya.
+
+\item \textbf{\textit{Producing Design Solutions}}
+
+Pada tahapan ini, solusi solusi perancangan mulai dibuat, mulai dari konsep kasar, diagram alur, \textit{wireframe}, hingga purwarupa interaktif yang memvisualisasikan bagaimana sistem akan bekerja memenuhi kebutuhan pengguna.
+
+\item \textbf{\textit{Evaluating the Design}}
+
+Desain yang telah dibuat akan diuji dan dinilai secara langsung dengan melibatkan pengguna untuk memvalidasi apakah desain sudah memenuhi kebutuhan mereka atau tidak. Hasil evaluasi ini akan menentukan apakah desain sudah layak atau perlu direvisi kembali melalui proses iterasi yang sama.
 \end{enumerate}
-Ketidakjelasan gambar ini dapat dilihat pada garis-garis diagram yang tidak tegas dan tulisan-tulisan dalam gambar yang tampak kabur dan kurang jelas terbaca.
 
-Untuk mendapatkan gambar yang tidak kabur (\textit{blur}), langkah-langkah berikut dapat digunakan:
-\begin{enumerate}[(a)]
-\item Gambar yang didapat di suatu pustaka atau referensi sebaiknya digambar ulang, misalnya menggunakan PowerPoint, Canva, Figma, draw.io, atau yang lainnya.
-\item Jika diagram atau ilustrasi digambar menggunakan draw.io, saat gambar disimpan ke format PNG atau JPG (\textit{export as}), lakukan \textit{zoom} ke minimal 300\% (\textit{the default value is} 100\%). 
-\item Jika diagram digambar dengan menggunakan PowerPoint, gambar dapat langsung di-\textit{copy-paste} ke Word.
+\subsubsection{\textit{Activity Centered Design}}
+\textit{Activity Centered Design} (ACD) adalah pendekatan desain yang menjadikan aktivitas atau perilaku pengguna sebagai fokus utama, bukan individu pengguna itu sendiri. Pendekatan ini berasumsi bahwa dengan memahami struktur aktivitas lalu merancang sistem yang mendukung aktivitas tersebut secara optimal, pengalaman pengguna akan meningkat. ACD sangat berguna ketika aktivitas pengguna dalam sebuah sistem bersifat kompleks, melibatkan banyak peran berbeda, dan ketika efisiensi serta keandalan penyelesaian tugas menjadi prioritas utama \cite{rogers2023interaction}.
+
+\subsubsection{\textit{Systems Design}}
+\textit{Systems Design} adalah pendekatan desain yang mempertimbangkan sistem secara holistik, termasuk komponen teknis, sosial, dan organisasional yang saling berinteraksi. Pendekatan ini berfokus pada bagaimana berbagai elemen dalam sistem seperti manusia, teknologi, proses bisnis, dan lingkungan organisasi dapat bekerja bersama sebagai satu kesatuan. Pendekatan ini memastikan bahwa solusi desain tidak hanya memecahkan masalah lokal tetapi juga kompatibel dengan ekosistem organisasi yang lebih besar \cite{rogers2023interaction}.
+
+\subsubsection{\textit{Genius Design}}
+\textit{Genius Design} adalah pendekatan desain yang mengandalkan keahlian, intuisi, dan kreativitas individual desainer yang sangat berpengalaman untuk menciptakan solusi inovatif. Pendekatan ini sering dikaitkan dengan desainer "visioner" atau "genius" yang mampu menghasilkan desain terobosan tanpa melakukan riset pengguna yang ekstensif atau mengikuti proses desain yang terstruktur. Pengguna hanya memvalidasi ide-ide tersebut dan tidak dilibatkan selama proses desain itu sendiri \cite{rogers2023interaction}.
+
+\section{\textit{User Interface}}
+\textit{User Interface} (UI) adalah titik interaksi antara pengguna dan sistem digital, mencakup semua elemen visual, kontrol, dan komponen yang memungkinkan pengguna berkomunikasi dengan sistem. UI meliputi semua aspek yang dapat dilihat, didengar, atau disentuh oleh pengguna ketika berinteraksi dengan produk digital, termasuk \textit{layout} halaman, tipografi, warna, ikon, tombol, formulir input, menu navigasi, dan elemen visual lainnya.
+
+Menurut \textcite{rogers2023interaction}, \textit{User Interface} yang baik harus memenuhi prinsip-prinsip berikut:
+
+\begin{enumerate}
+\item \textbf{Visibilitas}: Fungsi-fungsi penting harus terlihat jelas dan mudah ditemukan oleh pengguna.
+\item \textbf{Konsistensi}: Elemen yang sama harus terlihat dan berfungsi dengan cara yang sama di seluruh aplikasi.
+\item \textbf{\textit{Feedback}}: Sistem harus memberikan umpan balik yang jelas dan tepat waktu terhadap tindakan pengguna.
+\item \textbf{\textit{Affordance}}: Desain harus mengomunikasikan dengan jelas bagaimana suatu elemen dapat digunakan.
+\item \textbf{\textit{Constraints}}: Desain harus membatasi jenis interaksi yang mungkin dilakukan pada waktu tertentu untuk mencegah kesalahan.
 \end{enumerate}
 
-\subsection{Tabel}
-Tabel ada dua jenis, yaitu tabel yang bisa termuat dalam satu halaman dan tabel yang sangat panjang sehingga tidak muat dalam satu halaman.
-\subsubsection{Tabel yang Muat dalam Satu Halaman}
-Contoh tabel dapat dilihat pada Tabel \ref{tbl:harga1} dan \ref{tbl:harga2}. Tabel dan judulnya dibuat rata kiri dan judul tabel diletakkan di atas tabel. Usahakan tabel dapat ditulis dalam satu halaman, tidak terpotong ke halaman berikutnya.
+\section{\textit{User Experience}}
+\textit{User Experience} (UX) adalah konsep yang lebih luas dari \textit{User Interface}. UX mencakup keseluruhan pengalaman seseorang ketika berinteraksi dengan suatu produk atau layanan \cite{rogers2023interaction}. Menurut standar ISO 9241-210:2019, \textit{User Experience} didefinisikan sebagai persepsi dan respons seseorang yang dihasilkan dari penggunaan dan/atau antisipasi penggunaan suatu produk, sistem, atau layanan.
 
-\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-  \begin{tabular}{ | p{2cm} | p{2cm} | p{3cm} |}
+UX tidak hanya terbatas pada aspek fungsional dan \textit{usability}, tetapi juga mencakup:
+
+\begin{enumerate}
+\item \textbf{Aspek emosional}: Perasaan pengguna saat dan setelah menggunakan produk.
+\item \textbf{Aspek estetika}: Daya tarik visual dan keindahan desain.
+\item \textbf{Aspek kualitas interaksi}: Tingkat kesenangan dan kepuasan dalam proses interaksi.
+\item \textbf{Aspek temporal}: Perubahan pengalaman seiring waktu, mulai dari kesan pertama hingga penggunaan jangka panjang.
+\item \textbf{Aspek kontekstual}: Pengaruh konteks penggunaan, termasuk lingkungan fisik, sosial, dan situasional.
+\end{enumerate}
+
+\section{\textit{User Experience Goals}}
+\textit{User Experience Goals} adalah tujuan-tujuan yang ingin dicapai dalam menciptakan pengalaman pengguna yang berkualitas. \textit{User Experience Goals} lebih menekankan pada kualitas subjektif pengalaman pengguna \cite{rogers2023interaction}. Indikator \textit{User Experience Goals} yang diinginkan ditampilkan pada Tabel \ref{tbl:uxgoals-positive} dan Indikator \textit{User Experience Goals} yang tidak diinginkan ditampilkan pada Tabel \ref{tbl:uxgoals-negative}.
+
+
+
+\begin{table}[h] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+  \begin{tabular}{ | p{3cm} | p{3cm} | p{3cm} |}
 	\hline
-	Nama 	& Satuan 		& Harga \\
+	\textit{Satisfying} 	& \textit{Helpful} 		& \textit{Fun} \\
 	\hline
-	Buku 	& Exemplar	& 25000 \\
-	Komputer	& Unit		& 2500000 \\
-	Pensil	& Buah		& 118900 \\
+	\textit{Enjoyable} 	& \textit{Motivating} 		& \textit{Provocative} \\
+  \hline
+	\textit{Engaging} 	& \textit{Challenging} 		& \textit{Surprising} \\
+  \hline
+	\textit{Pleasureable} 	& \textit{Enhancing sociability} 		& \textit{Rewarding} \\
+  \hline
+	\textit{Exciting} 	& \textit{Supporting creativity} 		& \textit{Emotionally fulfilling} \\
+  \hline
+	\textit{Entertaining} 	& \textit{Cognitively stimulating} 		& \textit{Experiencing flow} \\
 	\hline
 	\end{tabular}
-\caption{Tabel harga bahan pokok}
-\label{tbl:harga1}
+\caption{Tabel \textit{User Experience Goals} yang Diinginkan}
+\label{tbl:uxgoals-positive}
 \end{table}
 
-
-
-\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-	\begin{tabular}{ | l | c | r | }
+\begin{table}[h] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+  \begin{tabular}{ | p{3cm} | p{3cm} | p{3cm} |}
 	\hline
-	Nama 	& Satuan 		& Harga \\
+	\textit{Boring} 	& \textit{Unpleasant} 		& \textit{Patronizing} \\
 	\hline
-	Buku 	& Exemplar	& 25000 \\
-	Komputer	& Unit		& 2500000 \\
-	Pensil	& Buah		& 118900 \\
+	\textit{Frustrating} 	& \textit{Making one feel guilty} 		& \textit{Making one feel stupid} \\
+  \hline
+	\textit{Cutesy} 	& \textit{Gimmicky} 		& \textit{Childish} \\
+  \hline
+	\textit{Annoying} 	&  & \\
 	\hline
 	\end{tabular}
-\caption{Tabel harga bahan sekunder}
-\label{tbl:harga2}
+\caption{Tabel \textit{User Experience Goals} yang Tidak Diinginkan}
+\label{tbl:uxgoals-negative}
 \end{table}
 
-% -- Example of importing table from external file --
-\subsubsection{Mengimpor Tabel dari Berkas Eksternal}
+\section{\textit{Usability Goals}}
+\textit{Usability Goals} adalah kriteria objektif yang digunakan untuk mengukur seberapa baik sistem mendukung pengguna dalam menyelesaikan tugas-tugas mereka \cite{rogers2023interaction}. \textit{Usability Goals} lebih berfokus pada aspek fungsional dan kinerja sistem yang dapat diukur secara kuantitatif. Terdapat enam \textit{Usability Goals} utama, yaitu:
 
-Tabel \ref{tbl:harga3} diimpor dari berkas eksternal \textit{table/tabel1.tex} menggunakan perintah \textit{input}. 
-Dengan demikian, jika tabel tersebut perlu diubah, cukup mengubah pada berkas eksternal tersebut tanpa perlu mengubah pada berkas utama ini.
+\begin{enumerate}
+\item \textbf{\textit{Effectiveness}}: Kemampuan sistem mendukung pengguna dalam menyelesaikan tugas-tugas mereka dengan baik.
+\item \textbf{\textit{Efficiency}}: Kecepatan dan usaha minimal yang dibutuhkan pengguna untuk menyelesaikan tugas.
+\item \textbf{\textit{Safety}}: Kemampuan sistem melindungi pengguna dari kondisi berbahaya dan konsekuensi yang tidak diinginkan.
+\item \textbf{\textit{Utility}}: Ketersediaan fungsi-fungsi yang tepat untuk memungkinkan pengguna melakukan hal yang mereka butuhkan atau inginkan.
+\item \textbf{\textit{Learnability}}: Kemudahan bagi pengguna baru dalam mempelajari cara menggunakan sistem.
+\item \textbf{\textit{Memorability}}: Kemudahan bagi pengguna yang sudah pernah menggunakan sistem untuk mengingat cara penggunaannya setelah lama tidak menggunakan sistem.
+\end{enumerate}
 
-\input table/tabel1.tex
+\section{\textit{Usability Heuristics}}
+\textit{Usability Heuristics} adalah prinsip-prinsip umum untuk desain interaksi yang dapat digunakan sebagai panduan dalam merancang antarmuka dan mengevaluasi \textit{usability} \cite{rogers2023interaction}. Berdasarkan \textcite{rogers2023interaction}, heuristik yang umum digunakan adalah 10 \textit{Usability Heuristics} yang dikembangkan oleh Jakob Nielsen. Berikut adalah 10 \textit{Usability Heuristics} Nielsen:
 
+\begin{enumerate}
+\item \textbf{\textit{Visibility of System Status}}: Sistem harus selalu memberi tahu pengguna tentang apa yang sedang terjadi melalui umpan balik yang tepat dalam waktu yang wajar.
+\item \textbf{\textit{Match Between System and the Real World}}: Sistem harus berbicara dalam bahasa pengguna, menggunakan kata-kata, frasa, dan konsep yang familier bagi pengguna, bukan istilah teknis yang berorientasi sistem.
+\item \textbf{\textit{User Control and Freedom}}: Pengguna memerlukan "pintu darurat" yang jelas untuk keluar dari keadaan yang tidak diinginkan akibat tindakan yang tidak disengaja, tanpa harus melalui dialog yang panjang.
+\item \textbf{\textit{Consistency and Standards}}: Pengguna tidak harus bertanya-tanya tentang kesamaan makna dari kata, situasi, atau tindakan yang berbeda.
+\item \textbf{\textit{Error Prevention}}: Mencegah masalah yang mungkin terjadi dengan implementasi desain yang tepat lebih baik daripada memberikan pesan saat kesalahan telah terjadi.
+\item \textbf{\textit{Recognition Rather than Recall}}: Meminimalkan beban ingatan pengguna dengan membuat objek, tindakan, dan opsi terlihat supaya pengguna dapat mengenali pola desain yang dibuat.
+\item \textbf{\textit{Flexibility and Efficiency of Use}}: Desain memberikan fleksibilitas dan efisiensi kepada pengguna untuk menyesuaikan tindakan yang sering dilakukan ketika menggunakan sistem.
+\item \textbf{\textit{Aesthetic and Minimalist Design}}: Desain yang dibuat tidak mengandung informasi yang tidak relevan atau jarang dibutuhkan.
+\item \textbf{\textit{Help Users Recognize, Diagnose, and Recover from Errors}}: Pesan kesalahan harus dinyatakan dalam bahasa yang jelas, tepat menunjukkan masalah, dan secara konstruktif menyarankan solusi.
+\item \textbf{\textit{Help and Documentation}}: Desain sistem harus memiliki dokumentasi yang relevan untuk membantu pengguna dalam mempelajari segala hal yang terkait dengan sistem tersebut.
+\end{enumerate}
 
-% -- Example of long table --
-\subsubsection{Tabel yang Sangat Panjang}
-Jika tabel terlalu panjang sehingga tidak muat dalam satu halaman, gunakan paket 
-\textit{longtable} untuk membuat tabel yang dapat terpotong ke halaman berikutnya, 
-seperti pada Tabel \ref{tbl:longtable1}.
+\section{\textit{User Persona}}
+\textit{User Persona} adalah representasi fiksi dari target pengguna yang dibuat berdasarkan data riset pengguna nyata \cite{rogers2023interaction}. \textit{User Persona} berfungsi sebagai alat komunikasi yang membantu tim desain untuk tetap fokus pada kebutuhan pengguna sepanjang proses desain dan pengembangan. \textit{User Persona} yang baik mencakup komponen berikut:
 
-\begin{longtable}{@{\extracolsep{\fill}} l c r r}
-\caption{Comprehensive Data Table Example}\label{tbl:longtable1} \\
-\midrule
-\textbf{ID} & \textbf{Name} & \textbf{Score} & \textbf{Rank} \\
-\midrule
-\endfirsthead
+\begin{enumerate}
+\item \textbf{Informasi Demografis}: Usia, pekerjaan, latar belakang pendidikan, lokasi geografis.
+\item \textbf{Tujuan dan Motivasi}: Hal yang ingin dicapai pengguna dengan menggunakan sistem.
+\item \textbf{Perilaku dan Preferensi}: Cara pengguna biasanya berinteraksi dengan teknologi, preferensi mereka, dan pola perilaku.
+\item \textbf{Kebutuhan dan \textit{Pain Points}}: Masalah atau frustrasi yang dialami pengguna dalam mencapai tujuan mereka.
+\item \textbf{Konteks Penggunaan}: Lingkungan dan situasi tempat pengguna akan menggunakan sistem.
+\item \textbf{Kutipan atau Narasi}: Pernyataan yang mencerminkan perspektif dan sikap pengguna.
+\item \textbf{Foto atau Ilustrasi}: Visual yang membantu membuat persona lebih terasa nyata dan mudah diingat.
+\end{enumerate}
 
-\caption[]{Comprehensive Data Table Example (lanjutan)} \\
-\midrule
-\textbf{ID} & \textbf{Name} & \textbf{Score} & \textbf{Rank} \\
-\midrule
-\endhead
+\section{\textit{Usability Testing}}
+\textit{Usability Testing} adalah metode evaluasi dimana pengguna nyata mencoba menggunakan produk atau sistem untuk menyelesaikan tugas-tugas spesifik, sementara pengawas akan mengamati, mendengarkan, dan mencatat hasil interaksi tersebut \cite{rogers2023interaction}. Tujuan utama \textit{usability testing} adalah untuk mengidentifikasi masalah \textit{usability}, mengumpulkan data kuantitatif tentang kinerja pengguna, dan menentukan kepuasan pengguna terhadap produk. \textit{Usability Testing} dapat menggunakan berbagai metrik untuk mengukur \textit{usability}, termasuk metrik objektif dan metrik subjektif.
 
-\midrule
-\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}} \\
-%\bottomrule
-\endfoot
+\subsection{\textit{System Usability Scale} (SUS)}
+\textit{System Usability Scale} (SUS) adalah kuesioner standar untuk mengukur \textit{usability} yang dirasakan dari suatu sistem \cite{brooke1996sus}. SUS terdiri dari 10 pernyataan dengan skala Likert 5 poin, di mana responden menunjukkan tingkat persetujuan mereka terhadap setiap pernyataan. Adapun komposisi dari 10 pertanyaan tersebut adalah 5 pernyataan disusun secara positif dan 5 lainnya disusun secara negatif.
 
-\midrule
-\endlastfoot
+% Gambar 2.1. Contoh pertanyaan pada System Usability Scale
 
-% === Table Data ===
-1 & Alice Smith & 89 & 5 \\
-2 & Bob Johnson & 93 & 3 \\
-3 & Carol Davis & 95 & 2 \\
-4 & Daniel Wilson & 88 & 6 \\
-5 & Eve Thompson & 97 & 1 \\
-6 & Frank Brown & 85 & 7 \\
-7 & Grace Lee & 91 & 4 \\
-8 & Henry Miller & 80 & 9 \\
-9 & Irene Garcia & 83 & 8 \\
-10 & Jack Robinson & 78 & 10 \\
-% Repeat with more rows to make it long
-11 & Kevin Harris & 76 & 11 \\
-12 & Laura Martin & 75 & 12 \\
-13 & Michael Clark & 74 & 13 \\
-14 & Natalie Lewis & 73 & 14 \\
-15 & Olivia Walker & 72 & 15 \\
-16 & Peter Hall & 71 & 16 \\
-17 & Quinn Allen & 70 & 17 \\
-18 & Rachel Young & 69 & 18 \\
-19 & Samuel King & 68 & 19 \\
-20 & Tina Wright & 67 & 20 \\
-21 & Uma Scott & 66 & 21 \\
-22 & Victor Green & 65 & 22 \\
-23 & Wendy Adams & 64 & 23 \\
-24 & Xavier Nelson & 63 & 24 \\
-25 & Yolanda Carter & 62 & 25 \\
-26 & Zachary Perez & 61 & 26 \\
-27 & Amelia Baker & 60 & 27 \\
-28 & Benjamin Rivera & 59 & 28 \\
-29 & Charlotte Rogers & 58 & 29 \\
-30 & David Murphy & 57 & 30 \\
-31 & Ethan Cooper & 56 & 31 \\
-32 & Fiona Reed & 55 & 32 \\
-33 & George Bailey & 54 & 33 \\
-34 & Hannah Cox & 53 & 34 \\
-35 & Isaac Howard & 52 & 35 \\
-36 & Julia Ward & 51 & 36 \\
-37 & Kyle Flores & 50 & 37 \\
-38 & Lily Bell & 49 & 38 \\
-39 & Mason Sanders & 48 & 39 \\
-40 & Nora Patterson & 47 & 40 \\
-41 & Owen Ramirez & 46 & 41 \\
-42 & Penelope Torres & 45 & 42 \\
-43 & Quentin Foster & 44 & 43 \\
-44 & Rebecca Gonzales & 43 & 44 \\
-45 & Sebastian Bryant & 42 & 45 \\
-46 & Taylor Alexander & 41 & 46 \\
-47 & Ursula Russell & 40 & 47 \\
-48 & Vincent Griffin & 39 & 48 \\
-49 & William Diaz & 38 & 49 \\
-50 & Zoe Simmons & 37 & 50 \\
-% (You can easily extend this list to hundreds of rows)
-\end{longtable}
+Perhitungan skor SUS dilakukan melalui langkah-langkah berikut:
 
-\subsubsection{Beberapa Contoh Penulisan Rumus atau Persamaan Matematika Menggunakan LaTeX Termasuk Penomorannya}
-Contoh rumus matematika dapat ditulis seperti pada Persamaan \ref{eq:contoh1} di bawah ini. 
-Penomoran persamaan diletakkan di sebelah kanan, dan rumus ditulis dalam mode \textit{display math}.
+\begin{enumerate}
+\item Untuk setiap pernyataan bernomor ganjil (1, 3, 5, 7, dan 9), skor jawaban pengguna dikurangi 1.
+\item Untuk setiap pernyataan bernomor genap (2, 4, 6, 8, dan 10), nilai 5 dikurangi dengan skor jawaban pengguna.
+\item Jumlahkan hasil perhitungan dari langkah 1 dan 2 untuk mendapatkan skor total sementara.
+\item Kalikan skor total sementara dengan 2,5 untuk mendapatkan skor akhir SUS (rentang 0-100).
+\end{enumerate}
+
+Menurut penelitian Sauro (2016), skor di atas 80 dinilai sangat baik, skor di rentang 68-80 dinilai baik hingga cukup baik, skor di rentang 50-68 dinilai cukup buruk hingga buruk, dan skor dibawah 50 dinilai tidak dapat diterima.
+
+\subsection{\textit{Single Ease Question} (SEQ)}
+\textit{Single Ease Question} (SEQ) adalah instrumen pengujian \textit{usability} pasca-tugas yang digunakan untuk mengukur persepsi pengguna terhadap tingkat kesulitan tugas yang baru saja diselesaikan. Berbeda dengan SUS yang mengukur kegunaan sistem secara keseluruhan di akhir sesi, SEQ diberikan segera setelah pengguna menyelesaikan satu skenario tugas tertentu \cite{rogers2023interaction}.
+
+Menurut \textcite{rogers2023interaction}, pengumpulan data dalam evaluasi tidak hanya dilakukan melalui kuesioner akhir, tetapi juga dapat dilakukan selama sesi berlangsung untuk menangkap respons pengguna terhadap fitur spesifik. SEQ umumnya menggunakan skala Likert 7 poin, mulai dari "Sangat Sulit" hingga "Sangat Mudah". Penggunaan metrik ini penting untuk mengidentifikasi bagian spesifik dari antarmuka yang menjadi \textit{pain points}, sehingga perbaikan dapat dilakukan secara lebih terarah pada fitur yang memiliki skor kemudahan rendah.
+
+% Gambar 2.2 Contoh SEQ
+
+\subsection{\textit{Task Completion Rate} (TCR)}
+\textit{Task Completion Rate} (TCR) adalah metrik utama untuk mengukur aspek efektivitas dalam tujuan \textit{usability}. Menurut \textcite{rogers2023interaction}, efektivitas merujuk pada seberapa baik sebuah sistem mendukung pengguna dalam mencapai tujuan mereka dengan akurat dan lengkap. TCR dihitung dengan persentase peserta yang berhasil menyelesaikan tugas yang diberikan tanpa bantuan kritis atau kesalahan fatal.
+
+Rumus perhitungan TCR dapat dilihat pada Persamaan \ref{eq:tcr}.
+
 \begin{equation}
-E = mc^2
-\label{eq:contoh1}
+\text{TCR} = \left( \frac{\text{Jumlah Tugas Berhasil}}{\text{Total Tugas yang Diberikan}} \right) \times 100\%
+\label{eq:tcr}
 \end{equation}
 
-Contoh lain penulisan rumus matematika yang lebih kompleks dapat ditulis seperti pada Persamaan \ref{eq:rumus2}.
+Nilai TCR memberikan gambaran objektif mengenai apakah desain antarmuka yang dirancang, seperti penempatan tombol atau alur navigasi, sudah cukup intuitif untuk memungkinkan pengguna menyelesaikan tujuannya secara mandiri.
 
-\begin{align}
-f(x) &= ax^2 + bx + c \\
-f'(x) &= \frac{d}{dx}(ax^2 + bx + c) \notag \\ % tidak menampilkan nomor pada baris ini
-      &= 2ax + b \label{eq:rumus2}
-\end{align}
+\subsection{\textit{Time on Task} (ToT)}
+\textit{Time on Task} (ToT) adalah metrik yang digunakan untuk mengukur aspek efisiensi dari sebuah sistem. Dalam konteks desain interaksi, \textcite{rogers2023interaction} menjelaskan efisiensi sebagai cara sistem mendukung pengguna dalam menyelesaikan tugas dengan sumber daya yang minimal, di mana waktu adalah salah satu sumber daya utamanya.
 
-Jika rumus terlalu panjang untuk ditulis dalam satu baris, gunakan lingkungan \textit{multline} seperti pada Persamaan \ref{eq:rumus3} di bawah ini.
-\begin{multline} 
-y = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6 + a_7x^7 \\
-    + a_8x^8 + a_9x^9 + a_{10}x^{10} \label{eq:rumus3}
-\end{multline}
+ToT mengukur durasi waktu yang dibutuhkan pengguna untuk menyelesaikan suatu tugas dari awal hingga akhir. Pengukuran ini dimulai saat pengguna mulai berinteraksi untuk mengerjakan tugas dan berhenti saat tugas berhasil diselesaikan. Waktu penyelesaian yang lebih singkat umumnya mengindikasikan antarmuka yang lebih efisien dan navigasi yang lebih jelas, asalkan penyelesaian tugas tersebut tetap akurat. Dalam evaluasi perancangan ulang (\textit{redesign}), penurunan rata-rata ToT dibandingkan dengan sistem lama seringkali menjadi indikator keberhasilan perbaikan antarmuka \cite{KhusnanHafidz2024}.
 
-Jika ada penurunan rumus yang terdiri dari beberapa baris, namun tidak memerlukan penomoran pada setiap baris, gunakan lingkungan \textit{align*}, misalnya:
-
-\begin{align*} 
-S &= \sum_{i=1}^{n} i^2 \\
-  &= 1^2 + 2^2 + 3^2 + \cdots + n^2 \\
-  &= \frac{n(n + 1)(2n + 1)}{6}
-\intertext{Contoh lainnya adalah rumus untuk mencari nilai rata-rata fungsi $f(x)$ pada interval $[p, q]$:}
-\bar{f} &= \frac{1}{q - p} \int_{p}^{q} f(x) \, dx \\
-        &= \frac{1}{q - p} \int_{p}^{q} (ax^2 + bx + c) \, dx \\
-        &= \frac{1}{q - p} \left[ \frac{a}{3}x^3 + \frac{b}{2}x^2 + cx \right]_p^q \\
-        &= \frac{a(q^3 - p^3)}{3(q - p)} + \frac{b(q^2 - p^2)}{2(q - p)} + c \label{eq:rumus4}
-\end{align*}
-
-
-
-\subsection{Algoritma, Pseudocode, atau Kode}
-Contoh penulisan algoritma atau pseudocode dapat ditulis seperti pada Kode \ref{alg:contoh1} di bawah ini. 
-Gunakan paket \textit{listings} untuk menulis source code dalam bahasa pemrograman tertentu, seperti pada Kode \ref{lst:contoh1}. 
-
-
-% -- Example of pseudocode and source code listing --
-% -- Gunakan minipage agar listing tidak terpotong ke halaman berikutnya --
-\begin{minipage}{\textwidth} 
-\begin{lstlisting}[frame=lines, captionpos=t, caption={Contoh pseudocode}, label={alg:contoh1}]
-ALGORITHM HelloWorld
-   PRINT "Hello, World!"
-END ALGORITHM
-\end{lstlisting}
-\end{minipage}
-
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=Python, frame=single, caption={Contoh source code Python}, captionpos=t, label={lst:contoh1}]
-def hello_world():
-    print("Hello, World!")       
-hello_world()
-\end{lstlisting}
-\end{minipage}
-
-
-\section{Beberapa Kesalahan Penulisan yang Sering Terjadi}
-\subsection{Penggunaan Kata "di mana" atau "dimana"}
-Banyak yang menuliskan kata "di mana" atau "dimana" sebagai pengganti kata "which" dalam bahasa Inggris. 
-Padahal, penggunaan kata "di mana" atau "dimana" tidak tepat dalam konteks tersebut. Demikian juga untuk kata serupa, misalnya "yang mana".
-Kata "di mana" atau "dimana" ini harus diganti dengan kata lain, seperti "dengan", "tempat", "yang", dan sebagainya tergantung kalimatnya.
-Penjelasan lengkap dapat dilihat pada \autocite{BPBI}.
-
-\subsection{Penggunaan Kata "sedangkan" dan "sehingga"}
-
-\begin{table}[t]
-  \begin{tabular}{|c|l|l|}
-  \hline
-  Kata & Salah & Benar \\ \hline
-  sedangkan & \begin{tabular}[c]{@{}c@{}}Sedangkan sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna,\\ sedangkan sistem baru belum siap.\end{tabular} \\ \hline
-  sehingga & \begin{tabular}[c]{@{}c@{}}Sehingga sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna sehingga\\ sistem baru belum siap.\end{tabular} \\ \hline
-  \end{tabular}
-  \caption{Contoh penggunaan kata "sedangkan" dan "sehingga"}
-  \label{tbl:sedangkan_sehingga}
-\end{table}
-
-Kata "sedangkan" dan "sehingga" adalah kata hubung atau konjungsi. 
-Konjungsi adalah kata atau ungkapan yang menghubungkan satuan bahasa 
-(kata, frasa, klausa, dan kalimat). 
-Konjungsi dapat dibagi menjadi konjungsi intrakalimat dan antarkalimat.  
-Kata "sedangkan" menghubungkan dua klausa yang bersifat kontrasif, 
-sedangkan "sehingga" menghubungkan dua klausa yang bersifat kausal. 
-Dalam ragam formal, kata hubung “sedangkan” dan “sehingga” hanya dapat digunakan 
-sebagai konjungsi intrakalimat sehingga kedua konjungsi itu \textbf{tidak dapat diletakkan pada awal kalimat}.
-Selain itu, penggunaan kata "sedangkan" harus didahului oleh koma (,), sedangkan kata "sehingga" tidak perlu didahului oleh koma (,).
-Contoh penggunaan yang benar dan salah dapat dilihat pada Tabel \ref{tbl:sedangkan_sehingga}.
-
-
-\subsection{Penggunaan Istilah yang Tidak Baku}
-Ada beberapa istilah yang sering digunakan dalam pembicaraan sehari-hari, tetapi tidak baku dalam penulisan ilmiah.
-Beberapa istilah tersebut antara lain:
-\begin{enumerate}
-  \item analisa $\rightarrow$ analisis
-  \item eksisting atau existing $\rightarrow$ yang ada atau saat ini
-  \item bisnis proses $\rightarrow$ proses bisnis
-  \item user $\rightarrow$ pengguna
-  \item system $\rightarrow$ sistem
-  \item database $\rightarrow$ basis data
-  \item aktifitas $\rightarrow$ aktivitas
-  \item efektifitas $\rightarrow$ efektivitas
-  \item sosial media $\rightarrow$ media sosial
-\end{enumerate}
-
-\subsection{Pemisah Desimal dan Ribuan}
-Tanda pemisah desimal dalam bahasa Indonesia adalah tanda koma, contoh:
-\begin{enumerate}
-  \item (Salah) Akurasi naik menjadi 50.6\% 
-  \item (Benar) Akurasi naik menjadi 50,6\% 
-\end{enumerate}
-
-\subsection{Daftar atau \textit{List}}
-Ada beberapa aturan penulisan daftar atau \textit{list} yang perlu diperhatikan, antara lain:
-\begin{enumerate}[a)]
-\item Jika memungkinkan, hindari penggunaan “bullet points” atau sejenisnya. Sebaiknya, gunakan angka (1, 2, 3, ...) atau huruf (a, b, c, …). Dengan demikian, pembaca dapat dengan mudah melihat jumlah \textit{item} atau \textit{list}. 
-\item Jika dalam daftar hanya ada satu item, tidak perlu menggunakan nomor urut.
-\item Penjelasan atau deskripsi suatu item sebaiknya menyatu dengan judul item tersebut, tidak berbeda halaman. Contoh yang salah: judul item ada di halaman 10, namun deskripsinya di halaman 11. Sebaiknya pindahkan judul tersebut ke halaman 11.
-\item Jika penjelasan atau deskripsi suatu item cukup panjang, misalnya lebih dari 1 halaman atau terdiri atas beberapa paragraf, sebaiknya setiap item tersebut dijadikan judul subbab, kecuali jika level subbab sudah mencapai level 4. 
-\end{enumerate}
-
-\subsection{Penggunaan Kata "masing-masing" dan "setiap"}
-Kata “masing-masing” digunakan di belakang kata yang diterangkan, misalnya 
-"Setiap proses menggunakan algoritma masing-masing". Kata “tiap-tiap” atau “setiap”
-ditempatkan di depan kata yang diterangkan, misalnya
-"Setiap proses menggunakan algoritma tertentu".

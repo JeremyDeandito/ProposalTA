@@ -5,34 +5,64 @@
 \label{chap:pendahuluan}
 % --- Latar Belakang ---
 \section{Latar Belakang}
-Latar Belakang menjelaskan dasar pemikiran, motivasi, kebutuhan, alasan, atau urgensi pemilihan masalah tugas akhir. Subbab ini berisi penjelasan ringkas tentang kondisi atau situasi yang ada saat ini terkait dengan topik yang dibahas. Tujuan utamanya adalah untuk memberikan informasi secukupnya kepada pembaca agar memahami topik yang akan dibahas. Dalam subbab ini, jelaskan hal-hal berikut ini:
-\begin{enumerate}
-\item	Kondisi atau situasi topik yang dibahas beserta permasalahannya, misalnya tentang pengelolaan informasi di puskesmas daerah pedesaan dan masalah yang dihadapi.
-\item	Berbagai solusi yang telah diterapkan atau solusi yang tersedia dan memungkinkan untuk diterapkan untuk menyelesaikan masalah tersebut.
-\end{enumerate}
+Perkembangan teknologi informasi yang berkembang cukup pesat dalam beberapa tahun terakhir telah mendorong pertumbuhan digitalisasi di berbagai sektor, salah satunya pendidikan tinggi. Transformasi digital ini secara fundamental mengubah cara mahasiswa belajar, termasuk dampaknya terhadap hasil belajar, motivasi, kognisi, dan keterlibatan dalam lingkungan pendidikan \cite{Sangsuwan2025}. Perguruan tinggi tidak lagi memanfaatkan teknologi hanya sebagai penunjang komunikasi, tetapi menjadikannya fondasi dalam pengelolaan pembelajaran, administrasi akademik, dan layanan informasi kepada mahasiswa, dosen, serta tenaga kependidikan. Dalam konteks ini, \textit{digital student handbook} dan sistem informasi akademik telah muncul sebagai alat penting yang menyediakan akses terstruktur terhadap katalog mata kuliah, kebijakan institusi, tenggat waktu penting, dan panduan prosedural \cite{Sangsuwan2025}.
+
+Dalam konteks pendidikan tinggi, Sistem Informasi Akademik (SIAKAD) menjadi salah satu komponen penting dalam ekosistem digital kampus. SIAKAD berfungsi mengintegrasikan berbagai aktivitas akademik seperti pengisian KRS, pengelolaan nilai, pengecekan jadwal, serta akses terhadap informasi akademik lainnya. Namun demikian, tinjauan sistematis pada pengembangan teknologi bantu menemukan bahwa banyak proyek pengembangan sistem yang masih berfokus pada perancangan kebutuhan sistem daripada pemahaman mendalam tentang pengguna dan konteks penggunaan mereka \cite{Ortiz-Escobar2023}. Studi tersebut menemukan bahwa fokus utamanya terletak pada kebutuhan sistem, bukan pada penggunanya, dan partisipasi pengguna lebih banyak terjadi di tahap akhir (\textit{usability testing}) daripada di seluruh fase desain.
+
+Permasalahan serupa juga dikonfirmasi oleh penelitian terbaru yang menyatakan bahwa pengembangan platform \textit{e-learning} seringkali berfokus pada perancangan kebutuhan sistem (\textit{system requirements}) daripada kebutuhan fungsional pengguna (\textit{users functional requirements}), yang secara negatif berdampak terhadap perilaku pengguna, interaksi, dan pengalaman \textit{e-learning} secara keseluruhan \cite{Mostefai2025}. Kondisi serupa ditemukan pada sistem akademik Universitas X. Meskipun sistem tersebut telah berjalan dengan baik secara fungsional, antarmuka yang ada belum sepenuhnya selaras dengan prinsip desain \textit{User Interface/User Experience} (UI/UX) yang baik dan kebutuhan nyata penggunanya.
+
+Dalam disiplin Desain Interaksi, kualitas antarmuka tidak hanya ditentukan oleh tampilan visual, tetapi juga oleh bagaimana interaksi antara pengguna dan sistem dirancang untuk mencapai tujuan yang efektif, efisien, dan memuaskan. Menurut \cite{rogers2023interaction}, desain interaksi menekankan pemahaman mendalam terhadap kebutuhan, perilaku, dan konteks penggunaan sebagai dasar pengambilan keputusan desain. Dari berbagai pendekatan yang ada, \textit{User Centered Design} (UCD) dinilai paling relevan untuk sistem akademik karena menempatkan pengguna sebagai pusat proses perancangan. Berbagai penelitian empiris \cite{Mostefai2025, Weinhandl2024, AzZahra2024, Ridho2023} telah membuktikan bahwa penerapan UCD secara sistematis mampu meningkatkan \textit{usability} dan pengalaman pengguna pada sistem berbasis \textit{website} secara signifikan.
+
+Berdasarkan uraian tersebut, perancangan ulang antarmuka sistem akademik Universitas X menjadi kebutuhan mendesak untuk memastikan pengalaman pengguna yang lebih baik. Oleh karena itu, penelitian ini dilaksanakan sebagai upaya untuk meningkatkan kualitas interaksi dalam ekosistem akademik digital Universitas X melalui penerapan pendekatan UCD.
 
 % --- Rumusan Masalah ---
 \section{Rumusan Masalah}
-Rumusan Masalah berisi masalah utama yang dibahas dalam tugas akhir. Rumusan masalah yang baik memiliki struktur sebagai berikut:
+Masalah utama dalam penelitian ini adalah bahwa \textit{website} SIAKAD Universitas X sudah berjalan secara fungsional, tetapi antarmukanya belum sepenuhnya mendukung kemudahan penggunaan dan pengalaman pengguna yang baik bagi mahasiswa, dosen, dan tenaga kependidikan. Jika permasalahan ini tidak segera diselesaikan, ketidakselarasan desain ini berpotensi meningkatkan beban kognitif pengguna, memperlambat efisiensi proses administrasi akademik, serta meningkatkan risiko kesalahan input data (\textit{human error}) yang dapat merugikan integritas data akademik institusi. Berdasarkan hal tersebut, rumusan masalah yang diangkat adalah:
 \begin{enumerate}
-\item	Pokok persoalan dari kondisi atau situasi yang ada saat ini. Dengan kata lain, jelaskan kelemahan atau kekurangan dari kondisi, situasi, atau solusi yang dijelaskan pada latar belakang. Ini merupakan pokok rumusan masalah.
-\item	Elaborasi lebih lanjut urgensi penyelesaian masalah tersebut (mengapa penting untuk diselesaikan dan akibat yang dapat terjadi jika tidak diselesaikan).
-\item	Usulan singkat terkait dengan solusi yang ditawarkan untuk menyelesaikan persoalan.
-Penting untuk diperhatikan bahwa persoalan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di bab Evaluasi (apakah terselesaikan atau tidak).
+\item Bagaimana kondisi pengalaman pengguna (\textit{user experience}) dan permasalahan antarmuka (\textit{user interface}) yang dialami oleh mahasiswa, dosen, dan tendik dalam menggunakan \textit{website} Sistem Informasi Akademik saat ini?
+\item Bagaimana kebutuhan pengguna (\textit{user requirements}), pola interaksi, dan konteks penggunaan dapat diidentifikasi sebagai dasar perancangan ulang antarmuka \textit{website} Sistem Informasi Akademik?
+\item Bagaimana merancang ulang antarmuka \textit{website} Sistem Informasi Akademik dengan prinsip desain interaksi dan pendekatan \textit{User Centered Design} (UCD) agar lebih intuitif, efisien, dan sesuai kebutuhan pengguna?
+\item Bagaimana hasil evaluasi \textit{usability} terhadap purwarupa antarmuka yang dihasilkan serta ditinjau dari aspek efektivitas, efisiensi, dan kepuasan pengguna?
 \end{enumerate}
 
 % --- Tujuan ---
 \section{Tujuan}
-Tuliskan tujuan utama dan/atau tujuan detail yang akan dicapai dalam pelaksanaan tugas akhir. Fokuskan pada hasil akhir yang ingin diperoleh setelah tugas akhir diselesaikan, terkait dengan penyelesaian persoalan pada rumusan masalah. Penting untuk diperhatikan bahwa tujuan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di akhir pelaksanaan tugas akhir apakah tercapai atau tidak. Tuliskan kriteria keberhasilan tugas akhir ini.
+Sejalan dengan rumusan masalah di atas, tujuan dari pelaksanaan tugas akhir ini adalah:
+\begin{enumerate}
+\item Menganalisis pengalaman pengguna dan mengidentifikasi permasalahan antarmuka pada \textit{website} Sistem Informasi Akademik yang digunakan oleh mahasiswa, dosen, dan tendik.
+\item Mengidentifikasi kebutuhan pengguna, pola interaksi, dan konteks penggunaan sebagai dasar perancangan ulang antarmuka \textit{website} Sistem Informasi Akademik.
+\item Merancang ulang antarmuka \textit{website} Sistem Informasi Akademik menggunakan prinsip desain interaksi dan pendekatan \textit{User Centered Design} (UCD) agar lebih intuitif, efisien, dan sesuai kebutuhan pengguna.
+\item Melakukan evaluasi \textit{usability} terhadap purwarupa antarmuka yang dihasilkan untuk menilai efektivitas, efisiensi, dan kepuasan pengguna sebelum diimplementasikan ke sistem aktual.
+\end{enumerate}
 
 % --- Batasan Masalah ---
 \section{Batasan Masalah}
-Tuliskan batasan-batasan yang diambil dalam pelaksanaan tugas akhir. Batasan ini dapat dihindari (bersifat opsional, tidak perlu ada) jika topik atau judul tugas akhir dibuat cukup spesifik.
+Untuk menjaga agar penelitian tetap fokus dan mendalam, maka ditetapkan batasan-batasan masalah sebagai berikut:
+\begin{enumerate}
+\item Pengguna yang dimaksud terbatas pada mahasiswa, dosen, dan tenaga kependidikan.
+\item Penelitian hanya berfokus pada aspek UI/UX, bukan pengembangan backend atau implementasi penuh.
+\item Proses penelitian mencakup perancangan dan evaluasi purwarupa, bukan implementasi ke sistem aktual.
+\item Perancangan ulang berfokus pada fitur-fitur yang sudah diimplementasikan berdasarkan dokumen Manual Pengguna Universitas X.
+\end{enumerate}
 
 % --- Metodologi Pengerjaan TA ---
 \section{Metodologi}
-Tuliskan semua tahapan yang akan dilalui selama pelaksanaan tugas akhir. Tahapan ini spesifik untuk menyelesaikan persoalan tugas akhir. Khusus untuk penyusunan proposal ini, jelaskan secara detail:
+Penelitian dilakukan menggunakan tahapan-tahapan yang ada sesuai dengan prinsip desain interaksi yang didasarkan pada ISO 9241-210:2019 yang meliputi tahapan-tahapan seperti:
+
 \begin{enumerate}
-\item	Tahapan investigasi pengumpulan fakta di latar belakang untuk merumuskan masalah.
-\item	Langkah-langkah pencarian, pengelompokan, dan penapisan literatur atau sumber informasi untuk mengumpulkan informasi yang relevan tentang topik yang diangkat, termasuk teori (konsep atau teori apa saja yang perlu dicari), hal-hal yang telah dicapai oleh orang lain (cara mencari dan kata kuncinya), dan berbagai informasi pendukung, untuk mencari solusi terhadap masalah yang dibahas. Gunakan metodologi yang tepat dalam menggali informasi dan dokumentasikan prosesnya (termasuk rekaman wawancara atau survei) di dalam Lampiran, termasuk tautan ke video atau foto. Hasil penggalian informasi ini akan dijelaskan secara sistematis di Bab II Studi Literatur.
+\item \textbf{\textit{Understanding and Specifying the Context of Use}}
+
+Pada tahap pengembangan ini, dilakukan pengumpulan data mendalam untuk memahami profil pengguna secara spesifik. Metode yang digunakan meliputi wawancara terstruktur dan penyebaran kuesioner kepada mahasiswa, dosen, dan tenaga kependidikan. Tujuannya adalah untuk memetakan karakteristik pengguna (\textit{user profiling}), menganalisis tugas-tugas utama yang sering dilakukan (\textit{task analysis}), serta mengidentifikasi kendala lingkungan fisik atau teknis yang mempengaruhi penggunaan sistem.
+
+\item \textbf{\textit{Specifying the User Requirements}}
+
+Data dari tahap sebelumnya dianalisis untuk merumuskan spesifikasi kebutuhan pengguna (\textit{user requirements}). Tahap ini bertujuan menetapkan kebutuhan fungsional antarmuka dan kebutuhan nonfungsional (seperti \textit{usability goals} dan \textit{user experience goals}). Luaran dari tahap ini berupa \textit{User Persona} dan \textit{User Journey Map} yang menjadi acuan utama dalam proses desain.
+
+\item \textbf{\textit{Producing Design Solutions}}
+
+Tahap ini berfokus pada perancangan solusi desain secara bertahap berdasarkan spesifikasi kebutuhan yang telah ditentukan di tahap sebelumnya. Proses dimulai dari pembuatan arsitektur informasi (\textit{Information Architecture}), perancangan kerangka kasar (\textit{Wireframe}), hingga pengembangan purwarupa interaktif tingkat tinggi (\textit{High-Fidelity Prototype}) menggunakan \textit{tools} desain seperti Figma. Desain dirancang secara iteratif untuk memastikan setiap elemen antarmuka menjawab permasalahan pengguna.
+
+\item \textbf{\textit{Evaluating the Design}}
+
+Tahap akhir adalah melakukan evaluasi terhadap purwarupa yang dihasilkan. Evaluasi dilakukan menggunakan metode \textit{Usability Testing} dengan melibatkan pengguna representatif. Pengukuran keberhasilan desain dilakukan menggunakan metrik \textit{Task Completion Rate} (TCR) untuk mengukur efektivitas, \textit{Time on Task} (ToT) untuk efisiensi, serta \textit{Single Ease Question} (SEQ) dan kuesioner \textit{System Usability Scale} (SUS) untuk mengukur kepuasan pengguna. Hasil evaluasi ini digunakan sebagai dasar untuk perbaikan desain akhir.
 \end{enumerate}
